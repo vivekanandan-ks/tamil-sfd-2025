@@ -21,7 +21,8 @@
         };
 
         app-run = pkgs.writeShellScriptBin "my-command" ''
-          xdg-open ${./index.html}
+          #xdg-open ${./index.html}
+          xdg-open ${./.}/index.html
         '';
 
       in
