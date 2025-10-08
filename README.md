@@ -1,4 +1,10 @@
-Open/Run this website locally using the command:
-```bash
-nix-shell -p python3 --command "python -m http.server 8000"
+# Two ways to open the website:-
+Run this in browser:
+```
+https://vivekanandan-ks.github.io/tamil-sfd-2025/
+```
+
+Run this in terminal:
+```
+
 ```
