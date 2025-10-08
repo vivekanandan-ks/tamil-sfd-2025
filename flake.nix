@@ -20,15 +20,24 @@
           inherit system;
         };
 
+        site = pkgs.stdenv.mkDerivation {
+          name = "my-static-site";
+          src = ./.;
+          installPhase = ''
+            mkdir -p $out
+            cp -r * $out/
+          '';
+        };
+
         app-run = pkgs.writeShellScriptBin "my-command" ''
           #xdg-open ${./index.html}
-          xdg-open ${./.}/index.html
+          xdg-open ${site}/index.html
         '';
 
       in
       {
         packages.default = app-run;
-        
+
       }
     );
 }
